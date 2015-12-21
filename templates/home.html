@@ -1,0 +1,299 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Stanislav Frolov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="{% static 'js/ie/html5shiv.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/ie8.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/ie9.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/timeline.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/highlight.css' %}" />
+	</head>
+
+	<body>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Top</a></li>
+					<li><a href="#timeline">Education</a></li>
+					<li><a href="#work">Work</a></li>
+					<li><a href="#portfolio">Side Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u 12u(mobile)">
+							<span class="image fit"><img src="{% static 'images/Stanislav_Frolov.JPG' %}" alt="" /></span>
+						</div>
+						<div class="8u 12u(mobile)">
+							<header>
+								<h1>Hey! <strong>Stanislav Frolov</strong> here!</h1>
+                                <h2>Nice to meet you!</h2>
+                                <p>I am currently enrolled into a master program for Electrical Engineering and Information Technoligies at the Karlsruhe Institute of Technology. My model is Optical Communication Technology.<br></p>
+							</header>
+							<p>I created this website to give you some information about myself. Below you can find a short timeline about my education, work experience and side projects I am engaged in. If you just want to leave me a message you can skip the content by <a href="#contact" class="scrolly" style="color: grey;">clicking here!</a></p>
+                            <footer>
+                                <p>Otherwise lets start with my education timeline!</p>
+							        <a href="#timeline" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
+                            </footer>
+						</div>
+					</div>
+				</article>
+			</div>
+
+        <!-- Timeline -->
+            <div class="wrapper style2">
+                <article id="timeline">
+                    <header>
+                        <h2>Education</h2>
+                        <p>Just a short timeline about my education.</p>
+                    </header>
+                </article>
+                    <div class="container">
+                <ul class="timeline">
+                    <li>
+                      <div class="timeline-badge"><i class="glyphicon glyphicon-log-in"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">Hello World! 01/01/1992</h4>
+{#                          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>#}
+                        </div>
+                        <div class="timeline-body">
+                          <p>I was born in <a href="https://www.google.com/maps/place/Kant,+Kyrgyzstan/">Kant, Kyrgyzstan</a>, which is a very small country in the former UDSSR. Most people do not know where that country is, so i most often tell them to imagine Kazakhstan and Kyrgzstan is the very first neigbhor on the right hand side. Hence, my mothertongue is <strong>russian</strong>.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge warning"><i class="glyphicon glyphicon-send"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">Welcome to Germany! 12/1993</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>In this cold winter we took a week long ride on the train through Moscow to move to Germany. This was only possible due to my family's roots which are half <strong>german</strong>. Since I was very young when we moved to germany I grew up bilingual.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-badge danger"><i class="glyphicon glyphicon-book"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">School is fun, they said. You will learn important things, they said. 09/2003</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p>I went to the basic primary school <a href="https://www.google.com/maps/place/Eichendorff-Schule+Offenburg/">Eichendorff-Schule-Offenburg</a>. Four years later I transitioned to the <a href="https://www.google.com/maps/place/Schiller+Gymnasium+Offenburg/">Schiller-Gymnaisum-Offenburg</a>. After 9 years I finished with the general qualification for university entrance.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-edit"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">Electrical Engineering and Information Technologies. 10/2011 - now</h4>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Directly after finishing school I started studying EE at the <a href="https://www.kit.edu/english">Karlsruhe Institute of Technology</a>. My Bachelor thesis at the <a href="https://www.ipq.kit.edu/">Institute of Photonics and Quantum Electronics</a> was about setting up an automated optical-signal-to-noise measurement system and characterizing the institutes transmitter. Have a look at my <a href="https://drive.google.com/file/d/0B5BOoOTpHys7SjU2d2ZDdzdpVmM/view">final talk</a> or <a href="https://drive.google.com/file/d/0B5BOoOTpHys7bVdMUFEyRldvQlU/view">full thesis</a>. Afterwards I continued my studies in a master program with a strong focus in Optical Communication Technology.</p>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+                        </div>
+                    <footer>
+                        <p>Let me tell you about my technical work experience!</p>
+                        <a href="#work" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
+                    </footer>
+            </div>
+
+		<!-- Work -->
+			<div class="wrapper style3">
+				<article id="work">
+					<header>
+						<h2>Technical Work Experience</h2>
+						<p>A list of all technical work experience.</p>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-car"></span>
+									<h3><a href="https://www.invenio.net/en/home/">invenio Engineers Karlsruhe GmbH</a></h3>
+									<p>Electric 1:5 Car Demonstrator controlled by an arduino <strong>Microcontroller</strong>. <strong>Embedded Systems</strong> and <strong>Android Development</strong>.</p>
+                                    <footer>C/C++, Java, Design and Implementation of Hard-/Software to control modules like steering, brakes, engine, distance sensors and LEDs.</footer>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-cogs"></span>
+									<h3><a href="https://www.kit.edu/english/">Karlsruhe Institute for Technology</a></h3>
+									<p><strong>Tutor</strong> for a C/C++ Laboratory. Students learn in groups how to design algorithms to control a Segway and implement the software.</p>
+                                    <footer>Low-Level Programming such as GPIO, PWM and ADCs to control engines, sensors, battery and other inputs.</footer>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-code"></span>
+									<h3><a href="https://www.fzi.de/en/home/">Research Center for Information Technology (FZI)</a></h3>
+									<p><strong>Web Development</strong> of a platform for demonstrators and applications to illustrate projects and filter for different properties.</p>
+                                    <footer>Design and Implementation of Software using Python, Django, HTML, CSS, JavaScript and jQuery.</footer>
+								</section>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<p>I am also engaged in a couple side projects!</p>
+						<a href="#portfolio" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Portfolio -->
+			<div class="wrapper style5">
+				<article id="portfolio">
+					<header>
+						<h2>Side Projects</h2>
+						<p>A list of the most recent projects I am engaged in.</p>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u(mobile)">
+								<article class="box style2">
+									<a href="#" class="image featured"><img src="{% static 'images/wearnepra.png' %}" alt=""/></a>
+									<h3><a href="http://www.wearnepra.com">Népra</a></h3>
+									<p>Finish Holistic, Minimalist and Ethical Active Wear Brand.</p>
+								</article>
+							</div>
+							<div class="4u 12u(mobile)">
+								<article class="box style2">
+									<a href="#" class="image featured"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>
+									<h3><a href="#">Veroeros primis</a></h3>
+									<p>Ornare nulla proin odio consequat.</p>
+								</article>
+							</div>
+							<div class="4u 12u(mobile)">
+								<article class="box style2">
+									<a href="#" class="image featured"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a>
+									<h3><a href="#">Lorem ipsum</a></h3>
+									<p>Ornare nulla proin odio consequat.</p>
+								</article>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<p>Get in touch with me!</p>
+						<a href="#contact" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Contact -->
+			<div class="wrapper style4">
+				<article id="contact" class="container 75%">
+					<header>
+						<h2>Leave me message!</h2>
+						<p>Use the form below to get in touch with me. I promise to be nice (:</p>
+					</header>
+                    <form method='POST' action=''>{% csrf_token %}
+                        {{ form|crispy }}
+                        <p></p>
+                        <input type='submit' value='Send'>
+                    </form>
+{#					<div>#}
+{#						<div class="row">#}
+{#							<div class="12u">#}
+{#								<form method='POST' action=''> {% csrf_token %}#}
+{#									<div>#}
+{#										<div class="row">#}
+{#											<div class="6u 12u(mobile)">#}
+{#												<input type="text" name="name" id="name" placeholder="Name" />#}
+{#											</div>#}
+{#											<div class="6u 12u(mobile)">#}
+{#												<input type="text" name="email" id="email" placeholder="Email" />#}
+{#											</div>#}
+{#										</div>#}
+{#										<div class="row">#}
+{#											<div class="12u">#}
+{#												<input type="text" name="subject" id="subject" placeholder="Subject" />#}
+{#											</div>#}
+{#										</div>#}
+{#										<div class="row">#}
+{#											<div class="12u">#}
+{#												<textarea name="message" id="message" placeholder="Message"></textarea>#}
+{#											</div>#}
+{#										</div>#}
+{#										<div class="row 200%">#}
+{#											<div class="12u">#}
+{#												<ul class="actions">#}
+{#													<li><input type="submit" value="Send Message" /></li>#}
+{#													<li><input type="reset" value="Clear Form" class="alt" /></li>#}
+{#												</ul>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</form>#}
+{#							</div>#}
+{#						</div>#}
+						<div class="row">
+							<div class="12u">
+								<hr />
+								<h3>Find me on ...</h3>
+								<ul class="social">
+									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+									<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+									<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+									<!--
+									<li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
+									<li><a href="#" class="icon fa-instagram"><span>Instagram</span></a></li>
+									<li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
+									<li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
+									<li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
+									<li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
+									<li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
+									<li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
+									<li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
+									-->
+								</ul>
+								<hr />
+							</div>
+						</div>
+{#					</div>#}
+					<footer>
+						<ul id="copyright">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'js/skel.min.js' %}"></script>
+			<script src="{% static 'js/skel-viewport.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<script src="{% static 'js/ie/respond.min.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+	</body>
+</html>
