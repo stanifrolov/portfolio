@@ -53,11 +53,11 @@
                                 <p>I am currently enrolled into a master program for Electrical Engineering and Information Technoligies at the Karlsruhe Institute of Technology. My model is Optical Communication Technology.<br></p>
 							</header>
 							<p>I created this website to give you some information about myself. Below you can find a short timeline about my education, work experience and side projects I am engaged in. If you just want to leave me a message you can skip the content by <a href="#contact" class="scrolly" style="color: grey;">clicking here!</a></p>
-                            <footer>
+						    <footer>
                                 <p>Otherwise lets start with my education timeline!</p>
-							        <a href="#timeline" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
+                                <a href="#timeline" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
                             </footer>
-						</div>
+                        </div>
 					</div>
 				</article>
 			</div>
@@ -113,7 +113,7 @@
                           <h4 class="timeline-title">Electrical Engineering and Information Technologies. 10/2011 - now</h4>
                         </div>
                         <div class="timeline-body">
-                          <p>Directly after finishing school I started studying EE at the <a href="https://www.kit.edu/english">Karlsruhe Institute of Technology</a>. My Bachelor thesis at the <a href="https://www.ipq.kit.edu/">Institute of Photonics and Quantum Electronics</a> was about setting up an automated optical-signal-to-noise measurement system and characterizing the institutes transmitter. Have a look at my <a href="https://drive.google.com/file/d/0B5BOoOTpHys7SjU2d2ZDdzdpVmM/view">final talk</a> or <a href="https://drive.google.com/file/d/0B5BOoOTpHys7bVdMUFEyRldvQlU/view">full thesis</a>. Afterwards I continued my studies in a master program with a strong focus in Optical Communication Technology.</p>
+                          <p>Directly after finishing school I started studying EE at the <a href="https://www.kit.edu/english">Karlsruhe Institute of Technology</a>. Afterwards I continued my studies in a master program with a strong focus in Optical Communication Technology.</p>
                         </div>
                       </div>
                     </li>
@@ -138,24 +138,24 @@
 								<section class="box style1">
 									<span class="icon featured fa-car"></span>
 									<h3><a href="https://www.invenio.net/en/home/">invenio Engineers Karlsruhe GmbH</a></h3>
-									<p>Electric 1:5 Car Demonstrator controlled by an arduino <strong>Microcontroller</strong>. <strong>Embedded Systems</strong> and <strong>Android Development</strong>.</p>
-                                    <footer>C/C++, Java, design and implementation of hard-/software to control modules like steering, brakes, engine, distance sensors and LEDs.</footer>
+									<p><strong>Working student</strong> on an electric 1:5 car demonstrator controlled by Arduino microcontroller and Android App.</p>
+                                    <footer>C/C++, Java, design and implementation of hard-/software to control modules like steering, brakes, engine, distance sensors and light.</footer>
 								</section>
 							</div>
 							<div class="4u 12u(mobile)">
 								<section class="box style1">
 									<span class="icon featured fa-cogs"></span>
 									<h3><a href="https://www.kit.edu/english/">Karlsruhe Institute for Technology (KIT)</a></h3>
-									<p><strong>Tutor</strong> for a C/C++ Laboratory. Students learn in groups how to design algorithms to control a Segway and implement the software.</p>
+									<p><strong>Tutor</strong> for a C/C++ laboratory. Students learn in groups how to design algorithms to control a Segway and implement the software.</p>
                                     <footer>Low-level programming such as GPIO, PWM and ADCs to control engines, sensors, battery and other inputs.</footer>
 								</section>
 							</div>
                             <div class="4u 12u(mobile)">
 								<section class="box style1">
 									<span class="icon featured fa-cogs"></span>
-									<h3><a href="">Institute of Photonics and Quantum Electronics (IPQ)</a></h3>
-									<p><strong>Bachelor Thesis</strong> with the topic 'setup of an automated optical-signal-to-noise measurement and system characterization'.</p>
-                                    <footer>Build software and setup to perform automated OSNR measurements. MATLAB, LabView and laboratory work for verification.</footer>
+									<h3><a href="https://www.ipq.kit.edu/">Institute of Photonics and Quantum Electronics (IPQ)</a></h3>
+									<p><strong>Bachelor thesis</strong> about automated optical SNR measurement and system characterization. Have a look at my <a href="https://drive.google.com/file/d/0B5BOoOTpHys7SjU2d2ZDdzdpVmM/preview">final talk</a> and <a href="https://drive.google.com/file/d/0B5BOoOTpHys7bVdMUFEyRldvQlU/preview">full thesis</a>.</p>
+                                    <footer>Build software and setup to perform the automated task. MATLAB, LabView and work with optical communication devices.</footer>
 								</section>
 							</div>
 							<div class="4u 12u(mobile)">
@@ -163,7 +163,7 @@
 									<span class="icon featured fa-code"></span>
 									<h3><a href="https://www.fzi.de/en/home/">Research Center for Information Technology (FZI)</a></h3>
 									<p><strong>Web Development</strong> of a platform for demonstrators and applications to illustrate projects and filter for different properties.</p>
-                                    <footer>Design and Implementation of Software using Python, Django, HTML, CSS, JavaScript and jQuery.</footer>
+                                    <footer>Design and implementation of software using Python, Django, HTML, CSS, JavaScript and jQuery.</footer>
 								</section>
 							</div>
 						</div>
@@ -186,7 +186,7 @@
 						<div class="row">
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="https://www.facebook.com/crossfit227/" class="image featured"><img src="{% static 'images/cf227.jpg' %}" alt="" /></a>
+									<a href="https://www.facebook.com/crossfit227/" class="image featured"><img src="{% static 'images/cf227.jpg' %}" id="fbfilter_cf" alt="" /></a>
 									<h3><a href="http://www.crossfit227.com">Crossfit 227</a></h3>
 									<p>Major Crossfit Box in Karlsruhe will help you to become strong, fit and healthy while having a lot of fun. Our amazing community supports each other. See <a href="https://www.youtube.com/watch?v=tzD9BkXGJ1M">What is Crossfit?</a> </p>
                                     <footer>Athlete and Coach</footer>
@@ -202,7 +202,7 @@
 							</div>
                             <div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="https://www.facebook.com/wearnepra/" class="image featured"><img src="{% static 'images/nepra.jpg' %}" alt=""/></a>
+									<a href="https://www.facebook.com/wearnepra/" class="image featured"><img src="{% static 'images/nepra.jpg' %}" id="fbfilter_nepra" alt=""/></a>
 									<h3><a href="http://www.wearnepra.com">Népra</a></h3>
 									<p>Finish holistic, minimalist and ethical active wear brand based in Lahti, Finland. High quality products from Italian materials are crafted in Estionia.</p>
                                     <footer>Technical Support</footer>
@@ -210,6 +210,7 @@
 							</div>
 						</div>
                         <footer>
+                            <p>Get in touch with me!</p>
                             <a href="#contact" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
                         </footer>
 					</div>
@@ -219,7 +220,7 @@
             <div class="wrapper style5" style="padding:9em;">
                     <article id="portfolio">
                         <header>
-                            <h2>If you like what you see you can contact me here!</h2>
+                            <h2>Feel free to contact me here!</h2>
                             <a href="{% url 'contact' %}" class="button medium scrolly">Send Mail</a>
                         </header>
                     </article>
