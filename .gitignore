@@ -1,3 +1,4 @@
 *.pyc
 .idea/workspace.xml
 portfolio/pw.py
+portfolio/settings/pw.py
