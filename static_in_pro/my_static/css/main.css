@@ -1100,7 +1100,7 @@
 		}
 
 		a img {
-			border: 0;
+			border: 1px solid #DDD;
 		}
 
 	b, strong {
@@ -1213,7 +1213,7 @@
 		}
 
 	form textarea {
-		height: 15em;
+		height: 12em;
 	}
 
 	form .formerize-placeholder {
@@ -1239,6 +1239,32 @@
 	form ::-moz-focus-inner {
 		border: 0;
 	}
+
+	form #div_id_email {
+		width: 50%;
+		padding-bottom: 10px;
+	}
+
+	form #div_id_name {
+		width: 50%;
+		padding-bottom: 10px;
+	}
+	form #div_id_subject {
+		padding-bottom: 10px;
+	}
+
+	form #div_id_message {
+		padding-bottom: 10px;
+	}
+
+	form #error_1_id_email strong{
+		color: #CA2411;
+	}
+
+	form #error_1_id_message strong{
+		color: #CA2411;
+	}
+
 
 /* Tables */
 
@@ -1312,7 +1338,8 @@ form label {
 
 		.image.featured {
 			display: block;
-			width: 100%;
+			/*max-width: 386px;*/
+			width: auto;
 			margin: 0 0 2em 0;
 		}
 
@@ -1624,6 +1651,7 @@ form label {
 		}
 
 		.wrapper.style4 {
+			padding-top: 50px;
 			background-color: #303030;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;

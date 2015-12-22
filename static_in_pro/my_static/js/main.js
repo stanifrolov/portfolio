@@ -53,8 +53,12 @@
 				var x = parseInt($('.wrapper').first().css('padding-top')) - 15;
 
 				$('#nav a, .scrolly').scrolly({
-					speed: 1000,
+					speed: 900,
 					offset: x
+				})
+				$('#send a, .scrolly').scrolly({
+					speed:900,
+					offset:x
 				});
 
 			});

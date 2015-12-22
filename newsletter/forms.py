@@ -6,10 +6,10 @@ from django.forms import widgets
 
 class ContactForm(forms.Form):
 
-    name = forms.CharField(label='', widget=forms.TextInput(attrs={'placeholder': 'Name'}))
-    email = forms.CharField(label='',required=True, widget=forms.TextInput(attrs={'placeholder': 'Email'}))
-    subject = forms.CharField(label='', widget=forms.TextInput(attrs={'placeholder': 'Subject'}))
-    message = forms.CharField(label='',widget=forms.Textarea(attrs={'placeholder': 'Message'}))
+    name = forms.CharField(label='', required=False, widget=forms.TextInput(attrs={'placeholder': 'Name'}))
+    email = forms.EmailField(label='', widget=forms.TextInput(attrs={'placeholder': 'Email'}))
+    subject = forms.CharField(label='', required=False, widget=forms.TextInput(attrs={'placeholder': 'Subject'}))
+    message = forms.CharField(label='', widget=forms.Textarea(attrs={'placeholder': 'Message'}))
 
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
@@ -26,5 +26,6 @@ class ContactForm(forms.Form):
             ButtonHolder(
                 Submit('submit', 'Submit', css_class='button white')
             ),
+            Fieldset('email', css_class='blockundso'),
         )
 

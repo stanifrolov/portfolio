@@ -6,6 +6,10 @@ from .forms import ContactForm
 # Create your views here.
 def home(request):
 
+    return render(request, "home.html")
+
+def contact(request):
+
     form = ContactForm(request.POST or None)
 
     if form.is_valid():
@@ -24,41 +28,10 @@ def home(request):
                   from_email,
                   to_email,
                   fail_silently=False)
-    else:
-        print("error")
 
     context = {
             "form": form,
         }
 
-    return render(request, "home.html", context)
+    return render(request, "contact.html", context)
 
-
-def contact(request):
-     form = ContactForm(request.POST or None)
-     if form.is_valid():
-        # for key,value in form.cleaned_data.items(): #iteritems() in 2.7
-        #     print(key, value)
-        form_email = form.cleaned_data.get("email")
-        form_message = form.cleaned_data.get("message")
-        form_full_name = form.cleaned_data.get("full_name")
-        # print (email, message, full_name)
-        subject = 'Site contact form'
-        from_email = settings.EMAIL_HOST_USER
-        to_email = [from_email, 'stani_frolov@web.de']
-        contact_message = "%s: %s via %s"%(
-            form_full_name,
-            form_message,
-            form_email)
-        send_mail(subject,
-                  contact_message,
-                  from_email,
-                  to_email,
-                  fail_silently=False
-                  )
-
-     context = {
-        "form": form,
-      }
-
-     return render(request, "contact.html", context)

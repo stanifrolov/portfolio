@@ -24,17 +24,21 @@
 
 	<body>
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#timeline">Education</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Side Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+    {% block nav %}
+    <!-- Nav -->
+        <nav id="nav">
+            <ul class="container">
+                <li><a href="#top">Top</a></li>
+                <li><a href="#timeline">Education</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#portfolio">Side Projects - Personal</a></li>
+                <li><a href="#contact">Social Media</a></li>
+                <li class="pull-right"><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    {% endblock %}
 
+    {% block content %}
 		<!-- Home -->
 			<div class="wrapper style1 first">
 				<article class="container" id="top">
@@ -135,15 +139,23 @@
 									<span class="icon featured fa-car"></span>
 									<h3><a href="https://www.invenio.net/en/home/">invenio Engineers Karlsruhe GmbH</a></h3>
 									<p>Electric 1:5 Car Demonstrator controlled by an arduino <strong>Microcontroller</strong>. <strong>Embedded Systems</strong> and <strong>Android Development</strong>.</p>
-                                    <footer>C/C++, Java, Design and Implementation of Hard-/Software to control modules like steering, brakes, engine, distance sensors and LEDs.</footer>
+                                    <footer>C/C++, Java, design and implementation of hard-/software to control modules like steering, brakes, engine, distance sensors and LEDs.</footer>
 								</section>
 							</div>
 							<div class="4u 12u(mobile)">
 								<section class="box style1">
 									<span class="icon featured fa-cogs"></span>
-									<h3><a href="https://www.kit.edu/english/">Karlsruhe Institute for Technology</a></h3>
+									<h3><a href="https://www.kit.edu/english/">Karlsruhe Institute for Technology (KIT)</a></h3>
 									<p><strong>Tutor</strong> for a C/C++ Laboratory. Students learn in groups how to design algorithms to control a Segway and implement the software.</p>
-                                    <footer>Low-Level Programming such as GPIO, PWM and ADCs to control engines, sensors, battery and other inputs.</footer>
+                                    <footer>Low-level programming such as GPIO, PWM and ADCs to control engines, sensors, battery and other inputs.</footer>
+								</section>
+							</div>
+                            <div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-cogs"></span>
+									<h3><a href="">Institute of Photonics and Quantum Electronics (IPQ)</a></h3>
+									<p><strong>Bachelor Thesis</strong> with the topic 'setup of an automated optical-signal-to-noise measurement and system characterization'.</p>
+                                    <footer>Build software and setup to perform automated OSNR measurements. MATLAB, LabView and laboratory work for verification.</footer>
 								</section>
 							</div>
 							<div class="4u 12u(mobile)">
@@ -174,112 +186,69 @@
 						<div class="row">
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="#" class="image featured"><img src="{% static 'images/wearnepra.png' %}" alt=""/></a>
+									<a href="https://www.facebook.com/crossfit227/" class="image featured"><img src="{% static 'images/cf227.jpg' %}" alt="" /></a>
+									<h3><a href="http://www.crossfit227.com">Crossfit 227</a></h3>
+									<p>Major Crossfit Box in Karlsruhe will help you to become strong, fit and healthy while having a lot of fun. Our amazing community supports each other. See <a href="https://www.youtube.com/watch?v=tzD9BkXGJ1M">What is Crossfit?</a> </p>
+                                    <footer>Athlete and Coach</footer>
+								</article>
+							</div>
+                            <div class="4u 12u(mobile)">
+								<article class="box style2">
+									<a class="image featured"><img src="{% static 'images/personal.jpg' %}" alt="" /></a>
+									<h3>Growth</h3>
+									<p>I am daily trying to improve in different aspects of life and become a stronger version of myself. By that I do not only mean physical strength and health but also mental.</p>
+                                    <footer>Exercise, Books, Meditation</footer>
+								</article>
+							</div>
+                            <div class="4u 12u(mobile)">
+								<article class="box style2">
+									<a href="https://www.facebook.com/wearnepra/" class="image featured"><img src="{% static 'images/nepra.jpg' %}" alt=""/></a>
 									<h3><a href="http://www.wearnepra.com">Népra</a></h3>
-									<p>Finish Holistic, Minimalist and Ethical Active Wear Brand.</p>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>
-									<h3><a href="#">Veroeros primis</a></h3>
-									<p>Ornare nulla proin odio consequat.</p>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a>
-									<h3><a href="#">Lorem ipsum</a></h3>
-									<p>Ornare nulla proin odio consequat.</p>
+									<p>Finish holistic, minimalist and ethical active wear brand based in Lahti, Finland. High quality products from Italian materials are crafted in Estionia.</p>
+                                    <footer>Technical Support</footer>
 								</article>
 							</div>
 						</div>
+                        <footer>
+                            <a href="#contact" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
+                        </footer>
 					</div>
-					<footer>
-						<p>Get in touch with me!</p>
-						<a href="#contact" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
-					</footer>
 				</article>
 			</div>
+        <!-- Portfolio -->
+            <div class="wrapper style5" style="padding:9em;">
+                    <article id="portfolio">
+                        <header>
+                            <h2>If you like what you see you can contact me here!</h2>
+                            <a href="{% url 'contact' %}" class="button medium scrolly">Send Mail</a>
+                        </header>
+                    </article>
+                </div>
+    {% endblock %}
 
-		<!-- Contact -->
-			<div class="wrapper style4">
+{#		<!-- Contact -->#}
+			<div class="wrapper style4" style="padding-bottom: 71px">
 				<article id="contact" class="container 75%">
-					<header>
-						<h2>Leave me message!</h2>
-						<p>Use the form below to get in touch with me. I promise to be nice (:</p>
-					</header>
-                    <form method='POST' action=''>{% csrf_token %}
-                        {{ form|crispy }}
-                        <p></p>
-                        <input type='submit' value='Send'>
-                    </form>
-{#					<div>#}
-{#						<div class="row">#}
-{#							<div class="12u">#}
-{#								<form method='POST' action=''> {% csrf_token %}#}
-{#									<div>#}
-{#										<div class="row">#}
-{#											<div class="6u 12u(mobile)">#}
-{#												<input type="text" name="name" id="name" placeholder="Name" />#}
-{#											</div>#}
-{#											<div class="6u 12u(mobile)">#}
-{#												<input type="text" name="email" id="email" placeholder="Email" />#}
-{#											</div>#}
-{#										</div>#}
-{#										<div class="row">#}
-{#											<div class="12u">#}
-{#												<input type="text" name="subject" id="subject" placeholder="Subject" />#}
-{#											</div>#}
-{#										</div>#}
-{#										<div class="row">#}
-{#											<div class="12u">#}
-{#												<textarea name="message" id="message" placeholder="Message"></textarea>#}
-{#											</div>#}
-{#										</div>#}
-{#										<div class="row 200%">#}
-{#											<div class="12u">#}
-{#												<ul class="actions">#}
-{#													<li><input type="submit" value="Send Message" /></li>#}
-{#													<li><input type="reset" value="Clear Form" class="alt" /></li>#}
-{#												</ul>#}
-{#											</div>#}
-{#										</div>#}
-{#									</div>#}
-{#								</form>#}
-{#							</div>#}
-{#						</div>#}
+					<div>
+                        {% block footer %}
 						<div class="row">
 							<div class="12u">
 								<hr />
 								<h3>Find me on ...</h3>
 								<ul class="social">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-									<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-									<!--
-									<li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span>Instagram</span></a></li>
-									<li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
-									<li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
-									<li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
-									<li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
-									<li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
-									<li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
-									<li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
-									-->
+									<li><a href="https://www.facebook.com/stani.frolov" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://github.com/stanislavfrolov92" class="icon fa-github"><span class="label">Github</span></a></li>
+									<li><a href="https://www.linkedin.com/in/stanislav-frolov-379090105" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://www.instagram.com/staninst/" class="icon fa-instagram"><span>Instagram</span></a></li>
 								</ul>
-								<hr />
+								<hr/>
 							</div>
 						</div>
-{#					</div>#}
+                        {% endblock %}
+					</div>
 					<footer>
 						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Stanislav Frolov</li><li>Template: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 				</article>
