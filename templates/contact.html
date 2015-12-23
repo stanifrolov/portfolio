@@ -6,29 +6,32 @@
     <!-- Nav -->
         <nav id="nav">
             <ul class="container">
-                <li><a href="/"> Go Back to Frontpage</a></li>
+                <li class="pull-left"><a href="{% url 'home' %}">Home</a></li>
+                <li class="pull-left"><a href="{% url 'home' %}#timeline">Education</a></li>
+                <li class="pull-left"><a href="{% url 'home' %}#work">Work</a></li>
+                <li class="pull-left"><a href="{% url 'home' %}#portfolio">Side Projects</a></li>
+                <li class="pull-right"><a href="https://www.instagram.com/staninst/" class="icon fa-instagram"></a></li>
+                <li class="pull-right"><a href="https://www.linkedin.com/in/stanislav-frolov-379090105" class="icon fa-linkedin"></a></li>
+                <li class="pull-right"><a href="https://github.com/stanislavfrolov92" class="icon fa-github"></a></li>
+                <li class="pull-right"><a href="https://www.facebook.com/stani.frolov" class="icon fa-facebook"></a></li>
+                <li class="pull-right"><a href="{% url 'contact' %}">About Me</a></li>
+                <li class="pull-right"><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
-    </nav>
+        </nav>
 {% endblock %}
 
 {% block content %}
     <!-- Contact -->
-        <div class="wrapper style4" style="padding-bottom: 20px;">
+        <div class="wrapper style2" style="">
             <article id="contact" class="container 75%">
                 <header>
                     <h2>Use the form below to get in touch with me!</h2>
                     <p>I will respond as quickly as possible.</p>
                 </header>
-                <form name="container" method='post' action='/contact/'>{% csrf_token %}
+                <form name="container" method='post' action=''>{% csrf_token %}
                     {{ form|crispy }}
                     <input type='submit' value='Send' id="send" href="{% url 'home' %}/#container">
                 </form>
             </article>
         </div>
 {% endblock %}
-
-{% block footer %}
-{% endblock %}
-
-
-

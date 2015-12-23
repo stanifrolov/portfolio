@@ -2,18 +2,13 @@
 {% load crispy_forms_tags %}
 
 <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Stanislav Frolov</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="{% static 'images/favicon/sf.ico' %}">
-		<script src="{% static 'js/ie/html5shiv.js' %}"></script>
 		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/ie8.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/ie9.css' %}" />
@@ -24,19 +19,22 @@
 	</head>
 
 	<body>
-
     {% block nav %}
-    <!-- Nav -->
-        <nav id="nav">
-            <ul class="container">
-                <li><a href="#top">Top</a></li>
-                <li><a href="#timeline">Education</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#portfolio">Side Projects - Personal</a></li>
-                <li><a href="#contact">Social Media</a></li>
-                <li class="pull-right"><a href="{% url 'contact' %}">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- Nav -->
+            <nav id="nav">
+                <ul class="container">
+                    <li class="pull-left"><a href="#top">Home</a></li>
+                    <li class="pull-left"><a href="#timeline">Education</a></li>
+                    <li class="pull-left"><a href="#work">Work</a></li>
+                    <li class="pull-left"><a href="#portfolio">Side Projects</a></li>
+                    <li class="pull-right"><a href="https://www.instagram.com/staninst/" class="icon fa-instagram"></a></li>
+                    <li class="pull-right"><a href="https://www.linkedin.com/in/stanislav-frolov-379090105" class="icon fa-linkedin"></a></li>
+                    <li class="pull-right"><a href="https://github.com/stanislavfrolov92" class="icon fa-github"></a></li>
+                    <li class="pull-right"><a href="https://www.facebook.com/stani.frolov" class="icon fa-facebook"></a></li>
+                    <li class="pull-right"><a href="{% url 'contact' %}">About Me</a></li>
+                    <li class="pull-right"><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
     {% endblock %}
 
     {% block content %}
@@ -44,16 +42,16 @@
 			<div class="wrapper style1 first">
 				<article class="container" id="top">
 					<div class="row">
-						<div class="4u 12u(mobile)">
+						<div class="4u 12(tablet) 12u(mobile)">
 							<span class="image fit"><img src="{% static 'images/Stanislav_Frolov.JPG' %}" alt="" /></span>
 						</div>
-						<div class="8u 12u(mobile)">
+						<div class="8u 12u(tablet) 12u(mobile)">
 							<header>
 								<h1>Hey! <strong>Stanislav Frolov</strong> here!</h1>
                                 <h2>Nice to meet you!</h2>
                                 <p>I am currently enrolled into a master program for Electrical Engineering and Information Technoligies at the Karlsruhe Institute of Technology. My model is Optical Communication Technology.<br></p>
 							</header>
-							<p>I created this website to give you some information about myself. Below you can find a short timeline about my education, work experience and side projects I am engaged in. If you just want to leave me a message you can skip the content by <a href="#contact" class="scrolly" style="color: grey;">clicking here!</a></p>
+							<p>I created this website to give you some information about myself. Below you can find a short timeline about my education, work experience and side projects I am engaged in. If you just want to leave me a message you can skip the content by <a href="{% url 'contact' %}" class="scrolly" style="color: grey;">clicking here!</a></p>
 						    <footer>
                                 <p>Otherwise lets start with my education timeline!</p>
                                 <a href="#timeline" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
@@ -177,7 +175,7 @@
 			</div>
 
 		<!-- Portfolio -->
-			<div class="wrapper style5">
+			<div class="wrapper style2">
 				<article id="portfolio">
 					<header>
 						<h2>Side Projects</h2>
@@ -212,49 +210,12 @@
 						</div>
                         <footer>
                             <p>Get in touch with me!</p>
-                            <a href="#contact" class="button medium scrolly glyphicon glyphicon-arrow-down"></a>
+                            <a href="{% url 'contact' %}" class="button medium scrolly">Contact</a>
                         </footer>
 					</div>
 				</article>
 			</div>
-        <!-- Portfolio -->
-            <div class="wrapper style5" style="padding:9em;">
-                    <article id="portfolio">
-                        <header>
-                            <h2>Feel free to contact me here!</h2>
-                            <a href="{% url 'contact' %}" class="button medium scrolly">Send Mail</a>
-                        </header>
-                    </article>
-                </div>
     {% endblock %}
-
-{#		<!-- Contact -->#}
-			<div class="wrapper style4" style="padding-bottom: 71px">
-				<article id="contact" class="container 75%">
-					<div>
-                        {% block footer %}
-						<div class="row">
-							<div class="12u">
-								<hr />
-								<h3>Find me on ...</h3>
-								<ul class="social">
-									<li><a href="https://www.facebook.com/stani.frolov" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="https://github.com/stanislavfrolov92" class="icon fa-github"><span class="label">Github</span></a></li>
-									<li><a href="https://www.linkedin.com/in/stanislav-frolov-379090105" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.instagram.com/staninst/" class="icon fa-instagram"><span>Instagram</span></a></li>
-								</ul>
-								<hr/>
-							</div>
-						</div>
-                        {% endblock %}
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Stanislav Frolov</li><li>Template: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</article>
-			</div>
 
 		<!-- Scripts -->
 			<script src="{% static 'js/jquery.min.js' %}"></script>
@@ -264,6 +225,7 @@
 			<script src="{% static 'js/util.js' %}"></script>
 			<script src="{% static 'js/ie/respond.min.js' %}"></script>
 			<script src="{% static 'js/main.js' %}"></script>
+		    <script src="{% static 'js/ie/html5shiv.js' %}"></script>
             <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 
 	</body>

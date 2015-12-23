@@ -11,110 +11,113 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-from .pw import emailHostPassword, emailHostUser
+from django.conf import settings
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if not settings.DEBUG:
+    import os
+    from .pw import emailHostPassword, emailHostUser
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'z)t#2ncjxh4jp_kl15nr^c!bk$=v&j^&(i!7b=j)k0(chznzza'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['stanislavfrolov.com',
-                'www.stanislavfrolov.com',
-                ]
-
-EMAIL_HOST = 'smtp.gmail.com'   # google unlock gmail captcha to enable django allow send mail to you
-EMAIL_HOST_USER = emailHostUser
-EMAIL_HOST_PASSWORD = emailHostPassword # create app password here
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-# Application definition
+    # Quick-start development settings - unsuitable for production
+    # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
-INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    # my apps
-    'newsletter',
-    'crispy_forms',
-)
+    # SECURITY WARNING: keep the secret key used in production secret!
+    SECRET_KEY = 'z)t#2ncjxh4jp_kl15nr^c!bk$=v&j^&(i!7b=j)k0(chznzza'
 
-MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-)
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = False
 
-ROOT_URLCONF = 'portfolio.urls'
+    ALLOWED_HOSTS = ['stanislavfrolov.com',
+                    'www.stanislavfrolov.com',
+                    ]
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
+    EMAIL_HOST = 'smtp.gmail.com'   # google unlock gmail captcha to enable django allow send mail to you
+    EMAIL_HOST_USER = emailHostUser
+    EMAIL_HOST_PASSWORD = emailHostPassword # create app password here
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+
+
+    # Application definition
+
+    INSTALLED_APPS = (
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        # my apps
+        'newsletter',
+        'crispy_forms',
+    )
+
+    MIDDLEWARE_CLASSES = (
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'django.middleware.security.SecurityMiddleware',
+    )
+
+    ROOT_URLCONF = 'portfolio.urls'
+
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [os.path.join(BASE_DIR, 'templates')],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
         },
-    },
-]
+    ]
 
-WSGI_APPLICATION = 'portfolio.wsgi.application'
+    WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+    # Database
+    # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/1.8/topics/i18n/
+    # Internationalization
+    # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+    LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+    TIME_ZONE = 'UTC'
 
-USE_I18N = True
+    USE_I18N = True
 
-USE_L10N = True
+    USE_L10N = True
 
-USE_TZ = True
+    USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
+    # Static files (CSS, JavaScript, Images)
+    # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/static/'
+    STATIC_URL = '/static/'
 
-STATIC_ROOT = '/home/nepra/webapps/stanislavfrolov_static/'
+    STATIC_ROOT = '/home/nepra/webapps/stanislavfrolov_static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static_in_pro", "my_static"),
-)
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, "static_in_pro", "my_static"),
+    )
