@@ -116,3 +116,5 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_r
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static_in_pro", "my_static"),
 )
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

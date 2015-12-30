@@ -121,3 +121,5 @@ if not settings.DEBUG:
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, "static_in_pro", "my_static"),
     )
+
+    CRISPY_TEMPLATE_PACK = 'bootstrap3'
