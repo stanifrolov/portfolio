@@ -2,11 +2,17 @@ from django.conf import settings
 from django.shortcuts import render
 from django.core.mail import send_mail
 from .forms import ContactForm
+from time import *
 
 # Create your views here.
 def home(request):
+    jahr = localtime()[0]
+    age = jahr - 1992
+    context = {
+        "age": age,
+    }
 
-    return render(request, "home.html")
+    return render(request, "home.html", context)
 
 def contact(request):
 

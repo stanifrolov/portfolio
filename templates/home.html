@@ -9,13 +9,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="{% static 'images/favicon/sf.ico' %}">
-{#		<link rel="stylesheet" href="{% static 'css/main.css' %}" />#}
-{#		<link rel="stylesheet" href="{% static 'css/ie8.css' %}" />#}
-{#		<link rel="stylesheet" href="{% static 'css/ie9.css' %}" />#}
 		<link rel="stylesheet" href="{% static 'css/timeline.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-{#		<link rel="stylesheet" href="{% static 'css/highlight.css' %}" />#}
 		<link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/myStyles.css' %}" />
 	</head>
@@ -61,9 +57,11 @@
 						<div class="col-md-8">
                             <h1>Hey, <strong>Stanislav Frolov</strong> here!</h1>
                             <h2>Nice to meet you!</h2>
-                            <p>I am 23 years old and presently living in Karlsruhe, Germany. I am currently enrolled into a master program for Electrical Engineering and Information Technoligies at the Karlsruhe Institute of Technology. My model is Optical Communication Technology.<br></p>
-							<p>I created this website to give you some information about my education, work experience and side projects I am engaged in. If you just want to leave me a message you can skip the content and <a href="{% url 'contact' %}">contact me here!</a></p>
-                            <p>Otherwise lets start with my education timeline!
+                            <p>I am {{ age }} years old and presently living in Karlsruhe, Germany. I am currently enrolled into a master program for Electrical Engineering and Information Technoligies at the Karlsruhe Institute of Technology. My model is Optical Communication Technology.<br></p>
+							<p>Although, I did not study Computer Science, I have a strong passion for software development. After my internship at Keysight Technologies in Böblingen, where I will develop Application and Instrument Software in the Digital Photonic Test Division Team, I will return to Karlsruhe to continue my studies.<br></p>
+                            <p><strong>Therefore, I am looking for a working-student position as a Software Developer beginning from September 2016.</strong></p>
+                            <p>I created this website to give you some information about my education, work experience and side projects I am engaged in. If you just want to leave me a message you can skip the content and <a href="{% url 'contact' %}">contact me here!</a></p>
+                            <p>Otherwise lets start with my education timeline! <a href="#timeline" class="btn btn-default fa fa-arrow-down scrolly" role="button"></a>
                             </p>
                         </div>
 					</div>
@@ -205,7 +203,7 @@
                             <section class="box-style">
                                 <a class="image-featured" href="https://www.facebook.com/wearnepra/"><img src="{% static 'images/nepra.jpg' %}" class="img-responsive" alt=""/></a>
                                 <h3><a href="http://www.wearnepra.com">Népra</a></h3>
-                                <p>Finish holistic, minimalist and ethical active wear brand based in Lahti, Finland. High quality products from Italian materials are crafted in Estionia.</p>
+                                <p>Finnish holistic, minimalist and ethical active wear brand based in Lahti, Finland. High quality products from Italian materials are crafted in Estionia.</p>
                                 <footer>Technical Support</footer>
                             </section>
                         </div>
@@ -213,7 +211,7 @@
                             <section class="box-style">
                                 <a class="image-featured"><img src="{% static 'images/personal.jpg' %}" class="img-responsive" alt="" /></a>
                                 <h3>Growth</h3>
-                                <p>I am daily trying to improve in different aspects of life and become a stronger version of myself. By that I do not only mean physical  but also mental strength and health.</p>
+                                <p>Daily trying to improve in different aspects of life and become a stronger version of myself. Not only physical but also mental strength and health.</p>
                                 <footer>Exercise, Reading, Meditation</footer>
                             </section>
                         </div>
