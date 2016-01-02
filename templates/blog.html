@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <!-- Page Content -->
+    <div class="wrapper" id="top" style="">
+        <header>
+            <h2>Blog</h2>
+            <p>A list of all my blog posts!</p>
+        </header>
+    </div>
+
+    <div class="container">
+        <!-- Post One -->
+        <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h4><a href="{% url 'post1' %}">Why I believe everybody should be engaged in some kind of physical exercise</a><small> 12/01/2016</small></h4>
+                <h4><a href="{% url 'post1' %}">The one thing I learnt in university</a><small> 20/01/2016</small></h4>
+            </div>
+        </div>
+    </div>
+{% endblock %}

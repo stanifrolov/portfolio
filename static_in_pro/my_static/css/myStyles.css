@@ -52,3 +52,10 @@ footer {
 .btn {
     font-size: large;
 }
+
+.post {
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-size: 20px;
+    line-height: 1.5;
+    padding-bottom: 100px;
+}

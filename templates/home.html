@@ -18,33 +18,7 @@
 
 	<body>
     {% block nav %}
-        <!-- Nav -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li><a href="#top" class="scrolly">Home</a></li>
-                <li><a href="#timeline" class="scrolly">Education</a></li>
-                <li><a href="#work" class="scrolly">Work</a></li>
-                <li><a href="#portfolio" class="scrolly">Side Projects</a></li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-                <li><a href="https://www.instagram.com/staninst/" class="fa fa-instagram fa-2x"></a></li>
-                <li><a href="https://www.linkedin.com/in/stanislav-frolov-379090105" class="fa fa-linkedin-square fa-2x"></a></li>
-                <li><a href="https://github.com/stanislavfrolov92" class="fa fa-github fa-2x"></a></li>
-                <li><a href="https://www.facebook.com/stani.frolov" class="fa fa-facebook-square fa-2x"></a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        {% include "navbar.html" %}
     {% endblock %}
 
     {% block content %}
@@ -58,8 +32,8 @@
                             <h1>Hey, <strong>Stanislav Frolov</strong> here!</h1>
                             <h2>Nice to meet you!</h2>
                             <p>I am {{ age }} years old and presently living in Karlsruhe, Germany. I am currently enrolled into a master program for Electrical Engineering and Information Technoligies at the Karlsruhe Institute of Technology. My model is Optical Communication Technology.<br></p>
-							<p>Although, I did not study Computer Science, I have a strong passion for software development. After my internship at Keysight Technologies in Böblingen, where I will develop Application and Instrument Software in the Digital Photonic Test Division Team, I will return to Karlsruhe to continue my studies.<br></p>
-                            <p><strong>Therefore, I am looking for a working-student position as a Software Developer beginning from September 2016.</strong></p>
+							<p>Although, I did not study Computer Science, I have a strong passion for software. After my internship at Keysight Technologies in Böblingen, where I will develop Application and Instrument Software in the Digital Photonic Test Division Team, I will return to Karlsruhe to continue my studies.<br></p>
+                            <p><strong>Therefore, I am looking for a working-student position as a Software Engineer beginning from September 2016.</strong></p>
                             <p>I created this website to give you some information about my education, work experience and side projects I am engaged in. If you just want to leave me a message you can skip the content and <a href="{% url 'contact' %}">contact me here!</a></p>
                             <p>Otherwise lets start with my education timeline! <a href="#timeline" class="btn btn-default fa fa-arrow-down scrolly" role="button"></a>
                             </p>
@@ -234,6 +208,8 @@
 			<script src="{% static 'js/main.js' %}"></script>
 		    <script src="{% static 'js/ie/html5shiv.js' %}"></script>
             <script src="{% static 'js/bootstrap.min.js' %}"></script>
+            <script src="{% static 'js/clean-blog.js' %}"></script>
+            <script src="{% static 'js/clean-blog.min.js' %}"></script>
 
 	</body>
 </html>

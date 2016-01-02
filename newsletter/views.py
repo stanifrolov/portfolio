@@ -41,4 +41,12 @@ def contact(request):
 
     return render(request, "contact.html", context)
 
+def blog(request):
+
+    return render(request, "blog.html")
+
+def post1(request):
+
+    return render(request, "post1.html")
+
 
