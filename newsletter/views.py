@@ -12,7 +12,7 @@ def home(request):
         "age": age,
     }
 
-    return render(request, "home.html", context)
+    return render(request, "index.html", context)
 
 def contact(request):
 

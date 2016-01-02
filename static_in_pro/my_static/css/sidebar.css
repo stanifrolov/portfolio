@@ -1,0 +1,27 @@
+#sidebar-wrapper {
+    position: fixed;
+    width: auto;
+    height: 400px;
+}
+
+.sidebar-nav {
+    position: fixed;
+    top: 50%;
+    width: auto;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    transform: translateY(-50%);
+}
+
+
+.sidebar-nav li a {
+    color: #9D9D9D;
+    padding: 5px;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+

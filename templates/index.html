@@ -1,0 +1,39 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Stanislav Frolov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="{% static 'images/favicon/sf.ico' %}">
+        {% include "css.html" %}
+	</head>
+
+	<body>
+    {% block nav %}
+        {% include "navbar.html" %}
+        {% include "sidebar.html" %}
+    {% endblock %}
+
+    {% block content %}
+		<!-- Home -->
+			{% include "home.html" %}
+
+        <!-- Timeline -->
+			{% include "timeline.html" %}
+
+		<!-- Work -->
+			{% include "work.html" %}
+
+		<!-- Side Projects -->
+            {% include "side_projects.html" %}
+    {% endblock %}
+
+		<!-- Scripts -->
+			{% include "scripts.html" %}
+
+	</body>
+</html>
