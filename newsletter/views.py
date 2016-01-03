@@ -49,4 +49,9 @@ def post1(request):
 
     return render(request, "post1.html")
 
+def post2(request):
+
+    return render(request, "post2.html")
+
+
 

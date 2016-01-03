@@ -13,8 +13,33 @@
 	</head>
 
 	<body>
+
     {% block nav %}
-        {% include "navbar.html" %}
+        <!-- Nav -->
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#top" class="scrolly">Home</a></li>
+                    <li><a href="#timeline" class="scrolly">Education</a></li>
+                    <li><a href="#work" class="scrolly">Work</a></li>
+                    <li><a href="#portfolio" class="scrolly">Side Projects</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
         {% include "sidebar.html" %}
     {% endblock %}
 

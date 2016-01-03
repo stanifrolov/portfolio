@@ -16,7 +16,7 @@ from django.conf import settings
 if not settings.DEBUG:
     import os
     from .pw import emailHostPassword, emailHostUser
-
+    
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
