@@ -14,6 +14,18 @@ def home(request):
 
     return render(request, "index.html", context)
 
+def education(request):
+
+    return render(request, "education.html")
+
+def work(request):
+
+    return render(request, "work.html")
+
+def sideprojects(request):
+
+    return render(request, "side_projects.html")
+
 def contact(request):
 
     form = ContactForm(request.POST or None)

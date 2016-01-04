@@ -1,40 +1,49 @@
+{% extends 'index.html' %}
 {% load staticfiles %}
 
-<div class="wrapper" id="portfolio">
-    <div class="row section-header">
-        <h2>Side Projects</h2>
-        <p>A list of the most recent projects I am engaged in.</p>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <section class="box-style">
-                    <a class="image-featured" href="https://www.facebook.com/crossfit227/"><img src="{% static 'images/cf227.jpg' %}" class="img-responsive" alt="" /></a>
-                    <h3><a href="http://www.crossfit227.com">Crossfit 227</a></h3>
-                    <p>Major <a href="https://www.youtube.com/watch?v=tzD9BkXGJ1M">Crossfit</a> Box in Karlsruhe will help you to become strong, fit and healthy while having a lot of fun. Our amazing community supports each other.</p>
-                    <div class="below">Athlete and Coach</div>
-                </section>
+{% block nav %}
+    {% include "navbar.html" %}
+    {% include "sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+    <!-- Side Projects -->
+        <div class="wrapper" id="top">
+            <div class="row section-header">
+                <h2>Side Projects</h2>
+                <p>A list of the most recent projects I am engaged in.</p>
             </div>
-            <div class="col-md-3">
-                <section class="box-style">
-                    <a class="image-featured" href="https://www.facebook.com/wearnepra/"><img src="{% static 'images/nepra.jpg' %}" class="img-responsive" alt=""/></a>
-                    <h3><a href="http://www.wearnepra.com">Népra</a></h3>
-                    <p>Finnish holistic, minimalist and ethical active wear brand based in Lahti, Finland. High quality products from Italian materials are crafted in Estionia.</p>
-                    <div class="below">Technical Support</div>
-                </section>
-            </div>
-            <div class="col-md-3">
-                <section class="box-style">
-                    <a class="image-featured"><img src="{% static 'images/personal.jpg' %}" class="img-responsive" alt="" /></a>
-                    <h3>Growth</h3>
-                    <p>I am daily trying to improve in different aspects of life and become a stronger version of myself. Not only physical but also mental strength and health is very important for me.</p>
-                    <div class="below">Exercise, Reading, Meditation</div>
-                </section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <section class="box-style">
+                            <a class="image-featured" href="https://www.facebook.com/crossfit227/"><img src="{% static 'images/cf227.jpg' %}" class="img-responsive" alt="" /></a>
+                            <h3><a href="http://www.crossfit227.com">Crossfit 227</a></h3>
+                            <p>Major <a href="https://www.youtube.com/watch?v=tzD9BkXGJ1M">Crossfit</a> Box in Karlsruhe will help you to become strong, fit and healthy while having a lot of fun. Our amazing community supports each other.</p>
+                            <div class="below">Athlete and Coach</div>
+                        </section>
+                    </div>
+                    <div class="col-md-3">
+                        <section class="box-style">
+                            <a class="image-featured" href="https://www.facebook.com/wearnepra/"><img src="{% static 'images/nepra.jpg' %}" class="img-responsive" alt=""/></a>
+                            <h3><a href="http://www.wearnepra.com">Népra</a></h3>
+                            <p>Finnish holistic, minimalist and ethical active wear brand based in Lahti, Finland. High quality products from Italian materials are crafted in Estionia.</p>
+                            <div class="below">Technical Support</div>
+                        </section>
+                    </div>
+                    <div class="col-md-3">
+                        <section class="box-style">
+                            <a class="image-featured"><img src="{% static 'images/personal.jpg' %}" class="img-responsive" alt="" /></a>
+                            <h3>Growth</h3>
+                            <p>I am daily trying to improve in different aspects of life and become a stronger version of myself. Physical and mental strength and health are very important for me.</p>
+                            <div class="below">Exercise, Reading, Meditation</div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row next">
+                    <p><a href="{% url 'contact' %}">Get in touch with me!</a></p>
+                </div>
             </div>
         </div>
-        <div class="row next">
-            <p>Get in touch with me!</p>
-            <a href="{% url 'contact' %}" class="btn btn-default scrolly" role="button">Contact</a>
-        </div>
-    </div>
-</div>
+{% endblock %}
+

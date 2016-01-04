@@ -1,0 +1,73 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+
+{% block nav %}
+    {% include "navbar.html" %}
+    {% include "sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+    <!-- Timeline -->
+         <div class="wrapper" id="top">
+            <div class="row section-header">
+                <h2>Education</h2>
+                <p>Just a short timeline about my education.</p>
+            </div>
+            <div class="container">
+                <ul class="timeline">
+                    <li>
+                      <div class="timeline-badge"><i class="glyphicon glyphicon-log-in"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">Hello World!</h4>
+                          <p><small class="text-muted">01/01/1992</small></p>
+                        </div>
+                        <div class="timeline-body">
+                          <p>I was born in <a href="https://www.google.com/maps/place/Kant,+Kyrgyzstan/">Kant, Kyrgyzstan</a>, which is a very small country in the former UDSSR. Most people do not know where that country is, so i most often tell them to imagine Kazakhstan and Kyrgzstan is the very first neigbhor on the right hand side. Hence, my mothertongue is <strong>russian</strong>.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge warning"><i class="glyphicon glyphicon-send"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">Welcome to Germany!</h4>
+                          <p><small class="text-muted">12/1993</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>In this cold winter we took a week long ride on the train through Moscow to move to Germany. This was only possible due to my family's roots which are half <strong>german</strong>. Since I was very young when we moved to germany I grew up bilingual.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-badge danger"><i class="glyphicon glyphicon-book"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">School is fun, they said.</h4>
+                          <p><small class="text-muted">09/2003</small></p>
+                        </div>
+                        <div class="timeline-body">
+                          <p>I went to the basic primary school <a href="https://www.google.com/maps/place/Eichendorff-Schule+Offenburg/">Eichendorff-Schule-Offenburg</a>. Four years later I transitioned to the <a href="https://www.google.com/maps/place/Schiller+Gymnasium+Offenburg/">Schiller-Gymnaisum-Offenburg</a>. After 9 years I finished with the general qualification for university entrance.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-edit"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">Electrical Engineering and Information Technologies.</h4>
+                          <p><small class="text-muted">10/2011 - now</small></p>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Directly after finishing school I started studying EE at the <a href="https://www.kit.edu/english">Karlsruhe Institute of Technology</a>. Afterwards I continued my studies in a master program with a strong focus in Optical Communication Technology.</p>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+                <div class="row next">
+                    <p>Let me tell you about my technical <a href="{% url 'work' %}">work experience</a>!</p>
+
+                </div>
+            </div>
+        </div>
+{% endblock %}

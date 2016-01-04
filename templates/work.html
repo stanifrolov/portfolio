@@ -1,52 +1,59 @@
-{% load staticfiles %}
+{% extends 'index.html' %}
 
-<div class="wrapper" id="work">
-    <div class="row section-header">
-        <h2>Technical Work Experience</h2>
-        <p>A list of all technical work experience.</p>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <section class="box-style">
-                    <span class="fa fa-car fa-5x"></span>
-                    <h3><a href="https://www.invenio.net/en/home/">invenio Engineers Karlsruhe GmbH</a></h3>
-                    <p><small class="text-muted">2013-2014</small></p>
-                    <p><strong>Working student</strong> on electric 1:5 car demonstrator controlled by Arduino microcontroller and Android App.</p>
-                    <div class="below">C/C++, Java, design and implementation of hard-/software to control modules like steering, brakes, engine, distance sensors and light.</div>
-                </section>
+{% block nav %}
+    {% include "navbar.html" %}
+    {% include "sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+    <!-- Work -->
+        <div class="wrapper" id="top">
+            <div class="row section-header">
+                <h2>Technical Work Experience</h2>
+                <p>A list of all technical work experience.</p>
             </div>
-            <div class="col-md-3">
-                <section class="box-style">
-                    <span class="fa fa-cogs fa-5x"></span>
-                    <h3><a href="https://www.kit.edu/english/">Karlsruhe Institute for Technology</a></h3>
-                    <p><small class="text-muted">2014-2015</small></p>
-                    <p><strong>Tutor</strong> for a C/C++ laboratory at the <a href="http://www.itiv.kit.edu/english/index.php">ITIV</a>. Students learn in groups how to design algorithms to control a Segway and implement the software.</p>
-                    <div class="below">Low-level programming such as GPIO, PWM and ADCs to control engines, sensors, battery and other in-/ and outputs.</div>
-                </section>
-            </div>
-            <div class="col-md-3">
-                <section class="box-style">
-                    <span class="fa fa-university fa-5x"></span>
-                    <h3><a href="https://www.kit.edu/english/">Karlsruhe Institute for Technology</a></h3>
-                    <p><small class="text-muted">2014-2015</small></p>
-                    <p><strong>Bachelor thesis</strong> at the <a href="https://www.ipq.kit.edu/">IPQ</a> about automated optical SNR measurement and system characterization. Have a look at my <a href="https://drive.google.com/file/d/0B5BOoOTpHys7SjU2d2ZDdzdpVmM/preview">final talk</a> and <a href="https://drive.google.com/file/d/0B5BOoOTpHys7bVdMUFEyRldvQlU/preview">full thesis</a>.</p>
-                    <div class="below">Build software and setup to perform the automated task. MATLAB, LabView and work with optical communication devices.</div>
-                </section>
-            </div>
-            <div class="col-md-3">
-                <section class="box-style">
-                    <span class="fa fa-code fa-5x"></span>
-                    <h3><a href="https://www.fzi.de/en/home/">Research Center for Information Technology</a></h3>
-                    <p><small class="text-muted">2015-now</small></p>
-                    <p><strong>Web Development</strong> of a platform for demonstrators and applications to illustrate projects and filter for different properties.</p>
-                    <div class="below">Design and implementation of software using Python, Django, HTML, CSS, JavaScript and jQuery.</div>
-                </section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <section class="box-style">
+                            <span class="fa fa-car fa-5x"></span>
+                            <h3><a href="https://www.invenio.net/en/home/">invenio Engineers Karlsruhe GmbH</a></h3>
+                            <p><small class="text-muted">2013-2014</small></p>
+                            <p><strong>Working student</strong> on electric 1:5 car demonstrator controlled by Arduino microcontroller and Android App.</p>
+                            <div class="below">C/C++, Java, design and implementation of hard-/software to control modules like steering, brakes, engine, distance sensors and light.</div>
+                        </section>
+                    </div>
+                    <div class="col-md-3">
+                        <section class="box-style">
+                            <span class="fa fa-cogs fa-5x"></span>
+                            <h3><a href="https://www.kit.edu/english/">Karlsruhe Institute for Technology</a></h3>
+                            <p><small class="text-muted">2014-2015</small></p>
+                            <p><strong>Tutor</strong> for a C/C++ laboratory at the <a href="http://www.itiv.kit.edu/english/index.php">ITIV</a>. Students learn in groups how to design algorithms to control a Segway and implement the software.</p>
+                            <div class="below">Low-level programming such as GPIO, PWM and ADCs to control engines, sensors, battery and other in-/ and outputs.</div>
+                        </section>
+                    </div>
+                    <div class="col-md-3">
+                        <section class="box-style">
+                            <span class="fa fa-university fa-5x"></span>
+                            <h3><a href="https://www.kit.edu/english/">Karlsruhe Institute for Technology</a></h3>
+                            <p><small class="text-muted">2014-2015</small></p>
+                            <p><strong>Bachelor thesis</strong> at the <a href="https://www.ipq.kit.edu/">IPQ</a> about automated optical SNR measurement and system characterization. Have a look at my <a href="https://drive.google.com/file/d/0B5BOoOTpHys7SjU2d2ZDdzdpVmM/preview">final talk</a> and <a href="https://drive.google.com/file/d/0B5BOoOTpHys7bVdMUFEyRldvQlU/preview">full thesis</a>.</p>
+                            <div class="below">Build software and setup to perform the automated task. MATLAB, LabView and work with optical communication devices.</div>
+                        </section>
+                    </div>
+                    <div class="col-md-3">
+                        <section class="box-style">
+                            <span class="fa fa-code fa-5x"></span>
+                            <h3><a href="https://www.fzi.de/en/home/">Research Center for Information Technology</a></h3>
+                            <p><small class="text-muted">2015-now</small></p>
+                            <p><strong>Web Development</strong> of a platform for demonstrators and applications to illustrate projects and filter for different properties.</p>
+                            <div class="below">Design and implementation of software using Python, Django, HTML, CSS, JavaScript and jQuery.</div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row next">
+                    <p>I am also engaged in a couple <a href="{% url 'sideprojects' %}">side projects</a>!</p>
+                </div>
             </div>
         </div>
-        <div class="row next">
-            <p>I am also engaged in a couple side projects!</p>
-            <a href="#portfolio" class="btn btn-default fa fa-arrow-down scrolly" role="button"></a>
-        </div>
-    </div>
-</div>
+{% endblock %}
