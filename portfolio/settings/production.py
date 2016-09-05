@@ -15,7 +15,7 @@ from django.conf import settings
 
 if not settings.DEBUG:
     import os
-    from .pw import emailHostPassword, emailHostUser
+    from .pw import emailHostPassword, emailHostUser, secretKey
     
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -24,7 +24,7 @@ if not settings.DEBUG:
     # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
     # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = 'z)t#2ncjxh4jp_kl15nr^c!bk$=v&j^&(i!7b=j)k0(chznzza'
+    SECRET_KEY = secretKey
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = False
