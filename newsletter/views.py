@@ -4,30 +4,30 @@ from django.core.mail import send_mail
 from .forms import ContactForm
 from time import *
 
+
 # Create your views here.
 def home(request):
-    jahr = localtime()[0]
-    age = jahr - 1992
+    year = localtime()[0]
+    age = year- 1992
     context = {
         "age": age,
     }
-
     return render(request, "index.html", context)
 
-def education(request):
 
+def education(request):
     return render(request, "education.html")
 
-def work(request):
 
+def work(request):
     return render(request, "work.html")
 
-def sideprojects(request):
 
+def sideprojects(request):
     return render(request, "side_projects.html")
 
-def contact(request):
 
+def contact(request):
     form = ContactForm(request.POST or None)
 
     if form.is_valid():
@@ -53,16 +53,16 @@ def contact(request):
 
     return render(request, "contact.html", context)
 
-def blog(request):
 
+def blog(request):
     return render(request, "blog.html")
 
-def post1(request):
 
+def post1(request):
     return render(request, "post1.html")
 
-def post2(request):
 
+def post2(request):
     return render(request, "post2.html")
 
 
