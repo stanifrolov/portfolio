@@ -1,7 +1,7 @@
 #sidebar-wrapper {
     position: fixed;
     width: auto;
-    height: 400px;
+    height: 200px;
 }
 
 .sidebar-nav {
@@ -17,7 +17,7 @@
 
 .sidebar-nav li a {
     color: #9D9D9D;
-    padding: 5px;
+    margin: 5px;
 }
 
 .sidebar-nav li a:hover {

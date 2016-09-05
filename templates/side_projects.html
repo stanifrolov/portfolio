@@ -8,41 +8,26 @@
 
 {% block content %}
     <!-- Side Projects -->
-        <div class="wrapper" id="top">
-            <div class="row section-header">
+        <div class="container">
+            <div class="section-header">
                 <h2>Side Projects</h2>
-                <p>A list of the most recent projects I am engaged in.</p>
             </div>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <section class="box-style">
-                            <a class="image-featured" href="https://www.facebook.com/crossfit227/"><img src="{% static 'images/cf227.jpg' %}" class="img-responsive" alt="" /></a>
-                            <h3><a href="http://www.crossfit227.com">Crossfit 227</a></h3>
-                            <p>Major <a href="https://www.youtube.com/watch?v=tzD9BkXGJ1M">Crossfit</a> Box in Karlsruhe will help you to become strong, fit and healthy while having a lot of fun. Our amazing community supports each other.</p>
-                            <div class="below">Athlete and Coach</div>
-                        </section>
-                    </div>
-                    <div class="col-md-3">
-                        <section class="box-style">
-                            <a class="image-featured" href="https://www.facebook.com/wearnepra/"><img src="{% static 'images/nepra.jpg' %}" class="img-responsive" alt=""/></a>
-                            <h3><a href="http://www.wearnepra.com">Népra</a></h3>
-                            <p>Finnish holistic, minimalist and ethical active wear brand based in Lahti, Finland. High quality products from Italian materials are crafted in Estionia.</p>
-                            <div class="below">Technical Support</div>
-                        </section>
-                    </div>
-                    <div class="col-md-3">
-                        <section class="box-style">
-                            <a class="image-featured"><img src="{% static 'images/personal.jpg' %}" class="img-responsive" alt="" /></a>
-                            <h3>Growth</h3>
-                            <p>I am daily trying to improve in different aspects of life and become a stronger version of myself. Physical and mental strength and health are very important for me.</p>
-                            <div class="below">Exercise, Reading, Meditation</div>
-                        </section>
-                    </div>
-                </div>
-                <div class="row next">
-                    <p><a href="{% url 'contact' %}">Get in touch with me!</a></p>
-                </div>
+                <h3><a href="http://www.crossfit227.com" target="_blank">Crossfit 227</a></h3>
+                <p>Major <a href="https://www.youtube.com/watch?v=tzD9BkXGJ1M" target="_blank">Crossfit</a> Box in Karlsruhe will help you to become strong, fit and healthy while having a lot of fun. Our amazing community supports each other.</p>
+                <p>Athlete and Coach</p>
+
+                <hr style="border-bottom: 1px solid;">
+
+                <h3><a href="http://www.wearnepra.com" target="_blank">Népra</a></h3>
+                <p>Finnish holistic, minimalist and ethical active wear brand based in Lahti, Finland. High quality products from Italian materials are crafted in Estionia.</p>
+                <p>Technical Support</p>
+
+                <hr style="border-bottom: 1px solid;">
+
+                <h3>Growth</h3>
+                <p>I am daily trying to improve in different aspects of life and become a stronger version of myself. Physical and mental strength and health are very important for me.</p>
+                <p>Exercise, Reading, Meditation</p>
             </div>
         </div>
 {% endblock %}

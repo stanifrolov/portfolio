@@ -1,17 +1,25 @@
 {% load staticfiles %}
 
-<div class="container" id="top">
-    <div class="row">
-        <div class="col-md-4">
-            <h1><span><img id="img-profile" src="{% static 'images/Stanislav_Frolov.JPG' %}" class="img-responsive" alt="" /></span></h1>
-        </div>
-        <div class="col-md-8">
-            <h1>Hi, I'm <strong>Stanislav Frolov</strong></h1>
-            <h2>Nice to meet you!</h2>
-            <p>I am {{ age }} years old and presently live in Karlsruhe, Germany. I am a student at the Karlsruhe Institute of Technology and currently enrolled into a master program for Electrical Engineering and Information Technologies. My study model is optical communication technology.<br></p>
-            <p>I have a strong passion for software engineering and I'm curious about developing clean, robust and maintainable code.<br></p>
-            <p>This website shall give you some information about my education, work experience and side projects. If you just want to leave me a message you can <a href="{% url 'contact' %}">contact me here!</a></p>
-            <p>Otherwise lets start with my <a href="{% url 'education' %}">education timeline.</a></p>
+<div class="container">
+    <div class="section-header">
+{#        <span><img id="img-profile" src="{% static 'images/Stanislav_Frolov.JPG' %}" class="img-responsive" alt="" /></span>#}
+        <h1>Hi, I'm <strong>Stanislav</strong></h1>
+    </div>
+    <div class="container">
+        <h2>Nice to meet you!</h2>
+        <p>I am {{ age }} years old and presently live in Karlsruhe, Germany. I am a student at the Karlsruhe Institute of Technology and currently enrolled into a master program for Electrical Engineering and Information Technologies. My study model is optical communication technology.<br></p>
+        <p>I have a strong passion for software engineering and I'm curious about developing clean, robust and maintainable code.<br></p>
+        <p>This website shall give you some information about my work experience, side projects and education timeline.
+
+        <hr style="border-bottom: 1px solid;">
+
+        <div class="container">
+            <h3>Get in touch with me:</h3>
+                <a href="mailto:mail.stanislav.frolov@gmail.com" target="_blank" class="fa fa-envelope-square fa-2x"></a>
+                <a href="https://www.linkedin.com/in/stanislav-frolov-379090105" target="_blank" class="fa fa-linkedin-square fa-2x"></a>
+                <a href="https://github.com/stanislavfrolov92" target="_blank" class="fa fa-github fa-2x"></a>
+                <a href="https://www.facebook.com/stani.frolov" target="_blank" class="fa fa-facebook-square fa-2x"></a>
+                <a href="https://www.instagram.com/staninst/" target="_blank" class="fa fa-instagram fa-2x"></a>
         </div>
     </div>
 </div>
