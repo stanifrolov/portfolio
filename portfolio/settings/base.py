@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 from django.conf import settings
 
 import os
-from .pw import emailHostPassword, emailHostUser
+from .pw import emailHostUser, emailHostPassword
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
