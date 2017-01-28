@@ -1,4 +1,4 @@
-#This is the README.md File
+# Personal website
 
-Python + Django project for my personal website
+Python + Django project for my personal website on [www.stanislavfrolov.com](www.stanislavfrolov.com)
 
