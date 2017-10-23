@@ -1,20 +1,22 @@
 .container {
-    max-width: 1024px;
-    margin: 20px auto;
+    margin: auto;
     line-height: 1.5;
-    font-size: 20px;
-    padding: 0 20px;
+    font-size: 16px;
     font-family: Hind,sans-serif;
+    padding: 5px;
 }
 
 .container .container {
-    max-width: 1024px;
-    margin: 20px auto;
-    padding: 0 20px;
+    max-width: 95%;
+    margin-bottom: -50px;
+}
+
+.container .section-header {
+    padding-top: 55px;
 }
 
 .section-header {
-    border-bottom: 5px solid;
+    border-bottom: 1px solid;
 }
 
 .content-header {
@@ -22,9 +24,6 @@
 }
 
 #img-profile {
-    width: 400px;
-    height: auto;
-    border-radius: 20%;
 }
 
 #img-work {
@@ -34,8 +33,25 @@
 
 .post {
     font-family: 'Lora', 'Times New Roman', serif;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     padding-bottom: 100px;
 }
 
+.fa {
+    color: #333;
+}
+
+.fa:hover {
+    text-decoration: none;
+    color: #9D9D9D;
+}
+
+.btn {
+    background-color: #333;
+    color: #9d9d9d;
+}
+
+.btn:hover {
+    color: #fff;
+}

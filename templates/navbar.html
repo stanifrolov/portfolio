@@ -1,24 +1,33 @@
+{% load static %}
+
 <!-- Nav -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="{% url 'home' %}" class="scrolly">Home</a></li>
-            <li><a href="{% url 'education' %}" class="scrolly">Education</a></li>
-            <li><a href="{% url 'work' %}" class="scrolly">Work</a></li>
-            <li><a href="{% url 'sideprojects' %}" class="scrolly">Side Projects</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-{#            <li><a href="{% url 'blog' %}">Blog</a></li>#}
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-inverse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-inverse">
+        <li><a href="{% url 'home' %}#home" >Home</a></li>
+        <li><a href="{% url 'home' %}#work">Work</a></li>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+{#          <li><a href="{% url 'home' %}#sideprojects">Side Projects</a></li>#}
+{#          <li><a href="{% url 'home' %}#education">Timeline</a></li>#}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+{#        <li><a href="{% url 'contact' %}">Contact</a></li>#}
+        <li><a href="mailto:mail.stanislav.frolov@gmail.com" target="_blank" class="fa fa-envelope-square fa-2x" style="text-decoration: none"></a></li>
+        <li><a href="https://www.linkedin.com/in/stanislav-frolov-379090105" target="_blank" class="fa fa-linkedin-square fa-2x" style="text-decoration: none"></a></li>
+        <li><a href="https://github.com/stanifrolov" target="_blank" class="fa fa-github fa-2x" style="text-decoration: none"></a></li>
+        <li><a href="https://de.quora.com/profile/Stanislav-Frolov-4" target="_blank" class="fa fa-quora fa-2x" style="text-decoration: none"></a></li>
+        <li><a href="https://www.facebook.com/stani.frolov" target="_blank" class="fa fa-facebook-square fa-2x" style="text-decoration: none"></a></li>
+        <li><a href="https://www.instagram.com/staninst/" target="_blank" class="fa fa-instagram fa-2x" style="text-decoration: none"></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

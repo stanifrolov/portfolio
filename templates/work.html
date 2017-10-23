@@ -1,103 +1,61 @@
-{% extends 'index.html' %}
 {% load staticfiles %}
 
-{% block nav %}
-    {% include "navbar.html" %}
-    {% include "sidebar.html" %}
-{% endblock %}
+<!-- Work -->
+<div class="container">
+    </div>
+<div class="container" id="work">
+    <div class="section-header">
+        <img id="img-profile" src="{% static 'images/work.png' %}" class="img-responsive" alt=""/>
+        <h3>Technical Work Experience</h3>
+    </div>
 
-{% block content %}
-    <!-- Work -->
-        <div class="container">
-            <div class="section-header">
-                <h2>Technical Work Experience</h2>
-            </div>
-            <div class="container">
-                <table style="width:100%;">
-                  <tr>
-                    <th><a href="https://www.inovex.de/de" target="_blank">inovex GmbH</a></th>
-                    <td  align="right"><span><img id="img-work" src="{% static 'images/inovex_logo.png' %}" class="img-responsive" alt="" /></span></td>
-                  </tr>
-                </table>
-                <p><strong>Software Engineering Working Student</strong>   <small class="text-muted">12/16 - present</small></p>
+    <div class="container">
 
-                <p>in the Data Management & Analytics team.</p>
-                {# <p>Technologies: Docker, Kubernetes, Java</p> #}
+        <a href="https://www.inovex.de/de" target="_blank">inovex GmbH</a>
+        <p><strong>Software Engineering Working Student</strong>   <small class="text-muted">12/16 - 11/17</small></p>
+        <p>in the Data Management & Analytics team. Developed a big data cloud platform on Kubernetes, various applications and a command-line interface. <a href="https://github.com/inovex/open-kubeyard" target="_blank">Kubeyard</a> is open-source!</p>
+        <p>Technologies: Google Cloud, Kubernetes, Docker, Helm, Java, Go, Python</p>
+        <br>
 
-                <hr style="border-bottom: 1px solid;">
-                <table style="width:100%;">
-                  <tr>
-                    <th><a href="https://www.daimler.com/de/" target="_blank">Daimler AG</a></th>
-                    <td  align="right"><span><img id="img-work" src="{% static 'images/daimler_logo.png' %}" class="img-responsive" alt="" /></span></td>
-                  </tr>
-                </table>
-                <p><strong>Software Engineering Working Student</strong>   <small class="text-muted">10/16 - 11/16</small></p>
+        <a href="https://www.daimler.com/de/" target="_blank">Daimler AG</a>
+        <p><strong>Software Engineering Working Student</strong>   <small class="text-muted">10/16 - 11/16</small></p>
+        <p>in the R&D Future Innovations team. Built a program to download Twitter tweets. Developed an Android survey app. Created a program to retrieve Fitbit data. Research topics included health, mobility, big data, machine learning, artificial intelligence and artificial neural nets.</p>
+        <p>Technologies: Python, Java, Android</p>
+        <br>
 
-                <p>in the R&D Future Innovations team. Built a program to download Twitter tweets. Developed an Android survey app. Created a program to retrieve Fitbit data. Research topics included health, mobility, big data, machine learning, artificial intelligence and artificial neural nets.</p>
-                <p>Technologies: Java, Python</p>
 
-                <hr style="border-bottom: 1px solid;">
-                <table style="width:100%;">
-                  <tr>
-                    <th><a href="https://www.keysight.com" target="_blank">Keysight Technologies</a></th>
-                    <td  align="right"><span><img id="img-work" src="{% static 'images/keysight-logo.png' %}" class="img-responsive" alt="" /></span></td>
-                  </tr>
-                </table>
-                <p><strong>Software Engineering Intern</strong>   <small class="text-muted">04/16 - 08/16</small></p>
+        <a href="https://www.keysight.com" target="_blank">Keysight Technologies</a>
+        <p><strong>Software Engineering Intern</strong>   <small class="text-muted">04/16 - 08/16</small></p>
+        <p>in the R&D Network and Data Center Solutions team. Developed search algorithms to solve an inversion problem in MATLAB and added this feature to the Optical Modulation Generator Software, which generates signals for transmission test. Replaced the random parameter setting, which results in full control over the polarization mode dispersion model.</p>
+        <p>Technologies: MATLAB</p>
+        <br>
 
-                <p>in the R&D Network and Data Center Solutions team. Developed search algorithms to solve an inversion problem in MATLAB and added this feature to the Optical Modulation Generator Software, which generates signals for transmission test. Replaced the random parameter setting, which results in full control over the polarization mode dispersion model.</p>
-                <p>Technologies: MATLAB</p>
 
-                <hr style="border-bottom: 1px solid;">
-                <table style="width:100%">
-                  <tr>
-                    <th><a href="https://www.fzi.de/en/home/" target="_blank">Research Center for Information Technology</a></th>
-                    <td  align="right"><span><img id="img-work" src="{% static 'images/fzi-logo.png' %}" class="img-responsive" alt="" /></span></td>
-                  </tr>
-                </table>
+        <a href="https://www.fzi.de/en/home/" target="_blank">Research Center for Information Technology</a>
+        <p><strong>Software Engineering Working Student</strong>   <small class="text-muted">12/15 - 03/16</small></p>
+        <p>in the Research for Information Process Engineering team. Worked on a platform for demonstrators and applications to illustrate projects and to filter by different properties.</p>
+        <p>Technologies: Python, Django, HTML, CSS, JavaScript.</p>
+        <br>
 
-                <p><strong>Software Engineering Working Student</strong>   <small class="text-muted">12/15 - 03/16</small></p>
-                <p>in the Research for Information Process Engineering team. Worked on a platform for demonstrators and applications to illustrate projects and to filter by different properties.</p>
-                <p>Technologies: Python, Django, HTML, CSS, JavaScript.</p>
 
-                <hr style="border-bottom: 1px solid;">
+        <a href="https://www.kit.edu/english/" target="_blank">Karlsruhe Institute of Technology</a>
+        <p><strong>Bachelor Thesis</strong>   <small class="text-muted">11/14 - 05/15</small></p>
+        <p>at the <a href="https://www.ipq.kit.edu/" target="_blank">IPQ</a> on automated optical SNR measurement and system characterization. Have a look at my <a href="https://drive.google.com/file/d/0B5BOoOTpHys7SjU2d2ZDdzdpVmM/preview" target="_blank">final talk</a> and <a href="https://drive.google.com/file/d/0B5BOoOTpHys7bVdMUFEyRldvQlU/preview" target="_blank">full thesis</a>.</p>
+        <p>Build software and setup to perform the automated task.</p>
+        <p>Technologies: LabVIEW, MATLAB</p>
+        <br>
 
-                <table style="width:100%">
-                  <tr>
-                    <th><a href="https://www.kit.edu/english/" target="_blank">Karlsruhe Institute of Technology</a></th>
-                    <td  align="right"><span><img id="img-work" src="{% static 'images/kit-logo.jpg' %}" class="img-responsive" alt="" /></span></td>
-                  </tr>
-                </table>
 
-                <p><strong>Bachelor Thesis</strong>   <small class="text-muted">11/14 - 05/15</small></p>
-                <p>at the <a href="https://www.ipq.kit.edu/" target="_blank">IPQ</a> on automated optical SNR measurement and system characterization. Have a look at my <a href="https://drive.google.com/file/d/0B5BOoOTpHys7SjU2d2ZDdzdpVmM/preview" target="_blank">final talk</a> and <a href="https://drive.google.com/file/d/0B5BOoOTpHys7bVdMUFEyRldvQlU/preview" target="_blank">full thesis</a>.</p>
-                <p>Build software and setup to perform the automated task.</p>
-                <p>Technologies: LabVIEW, MATLAB</p>
+        <a href="https://www.kit.edu/english/" target="_blank">Karlsruhe Institute of Technology</a>
+        <p><strong>Programming Tutor</strong>   <small class="text-muted">10/14 - 03/15</small></p>
+        <p>at the <a href="http://www.itiv.kit.edu/english/index.php" target="_blank">ITIV</a>. Supervised groups of students to learn how to design and implement software to control a Segway.</p>
+        <p>Technologies: C++</p>
+        <br>
 
-                <hr style="border-bottom: 1px solid;">
+        <a href="https://www.invenio.net/en/home/" target="_blank">invenio Engineers Karlsruhe GmbH</a>
+        <p><strong>Software Engineering Working Student</strong>   <small class="text-muted">10/13 - 08/14</small></p>
+        <p>in the Embedded Systems team. Supported the development of a simulation software to test the output of an LCD display. Built Arduino software to for a 1:5 scale electric car model. Developed an Android app to control it via Wi-Fi.</p>
+        <p>Technologies: C++, Java, Android</p>
 
-                <table style="width:100%">
-                  <tr>
-                    <th><a href="https://www.kit.edu/english/" target="_blank">Karlsruhe Institute of Technology</a></th>
-                    <td  align="right"><span><img id="img-work" src="{% static 'images/kit-logo.jpg' %}" class="img-responsive" alt="" /></span></td>
-                  </tr>
-                </table>
-                <p><strong>Programming Tutor</strong>   <small class="text-muted">10/14 - 03/15</small></p>
-                <p>at the <a href="http://www.itiv.kit.edu/english/index.php" target="_blank">ITIV</a>. Supervised groups of students to learn how to design and implement software to control a Segway.</p>
-                <p>Technologies: C++</p>
-
-                <hr style="border-bottom: 1px solid;">
-
-                <table style="width:100%">
-                  <tr>
-                    <th><a href="https://www.invenio.net/en/home/" target="_blank">invenio Engineers Karlsruhe GmbH</a></th>
-                    <td  align="right"><span><img id="img-work" src="{% static 'images/invenio-logo.PNG' %}" class="img-responsive" alt="" /></span></td>
-                  </tr>
-                </table>
-                <p><strong>Software Engineering Working Student</strong>   <small class="text-muted">10/13 - 08/14</small></p>
-                <p>in the Embedded Systems team. Supported the development of a simulation software to test the output of an LCD display. Built Arduino software to for a 1:5 scale electric car model. Developed an Android app to control it via Wi-Fi.</p>
-                <p>Technologies: C++, Java</p>
-
-            </div>
-        </div>
-{% endblock %}
+    </div>
+</div>

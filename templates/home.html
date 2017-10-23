@@ -1,26 +1,49 @@
-{% load staticfiles %}
+{% load static %}
 
-<div class="container">
+<!-- Home -->
+<div class="container" id="home">
+
+
     <div class="section-header">
-{#        <span><img id="img-profile" src="{% static 'images/Stanislav_Frolov.JPG' %}" class="img-responsive" alt="" /></span>#}
-        <h1>Hi, I'm <strong>Stanislav</strong></h1>
+        <img id="img-profile" src="{% static 'images/thinking.jpg' %}" class="img-responsive" alt="" style="position: relative; clip: rect(0px, 1170px, 200px, 0px);"/>
+        <h3>About</h3>
     </div>
     <div class="container">
-        <h2>Nice to meet you!</h2>
-        <p>I am {{ age }} years old and presently live in Karlsruhe, Germany. I am a student at the Karlsruhe Institute of Technology and currently enrolled into a master program for Electrical Engineering and Information Technology.<br></p>
-        <p>I have a strong passion for software engineering and I'm curious about developing clean, robust and maintainable code.<br></p>
-        <p>During my free time you can find me exercising and coaching at <a href="http://www.crossfit227.com" target="_blank">Crossfit 227</a>, reading books, listening to audio books, coding or enjoying time with family and friends.<br></p>
-        <p>This website shall give you some information about my technical work experience.
 
-        <hr style="border-bottom: 1px solid;">
+        <p>Hi, I'm <strong>Stanislav</strong>, <strong>Software Engineer</strong> and <strong>Coach</strong>!</p>
 
-        <div class="container">
-            <h3>Get in touch with me:</h3>
-                <a href="mailto:mail.stanislav.frolov@gmail.com" target="_blank" class="fa fa-envelope-square fa-2x" style="text-decoration: none"></a>
-                <a href="https://www.linkedin.com/in/stanislav-frolov-379090105" target="_blank" class="fa fa-linkedin-square fa-2x" style="text-decoration: none"></a>
-                <a href="https://github.com/stanifrolov" target="_blank" class="fa fa-github fa-2x" style="text-decoration: none"></a>
-                <a href="https://www.facebook.com/stani.frolov" target="_blank" class="fa fa-facebook-square fa-2x" style="text-decoration: none"></a>
-                <a href="https://www.instagram.com/staninst/" target="_blank" class="fa fa-instagram fa-2x" style="text-decoration: none"></a>
-        </div>
+        <p>
+            I am {{ age }} years old and presently live in Karlsruhe, Germany. I work as a big data engineer at
+            <a href="https://www.inovex.de/de" target="_blank">inovex</a>.
+            I studied electrical engineering and information technology at the
+            <a href="https://www.kit.edu/english" target="_blank">Karlsruhe Institute of Technology</a> and
+            wrote my master's thesis about deep neural networks for multiple object tracking. I've worked at a couple
+            places and gained experiences across various areas. Find more about work <a href="{% url 'home' %}#work">here</a>.
+        </p>
+
+        <p>
+            I was born in <a href="https://www.google.com/maps/place/Kant,+Kyrgyzstan/" target="_blank">Kant, Kyrgyzstan</a>,
+            which is a very small country in the former UDSSR. Most people don't know where that country is,
+            so I keep saying to imagine Kazakhstan and Kyrgzstan is the very first neighbor on the right hand side.
+            I speak fluent russian. We moved to germany when I was about two years old, so I grew up bilingual.
+        </p>
+
+        <p>
+            Sports and physical activity in general is very important for me. I mainly do CrossFit, weightlifting and some running.
+            I'm a CrossFit L1 Trainer since August 2015. I coach at least one class per week. Regeneration is a
+            major component in growing stronger and becoming better. I stretch daily, try to do Yoga a couple of times per week
+            and meditate. Improving and growing in different aspects of life, become a stronger version of myself,
+            physical and mental strength and drives me.
+        </p>
+
+        <p>
+            During my free time you can find me reading books, listening to audio books,
+            coding or enjoying time with family and friends. I also  answer questions on
+            <a href="https://de.quora.com/profile/Stanislav-Frolov-4">Quora</a>. I mainly answer in german
+            and around topics such as personal development, habits, mindset, leaving your comfortzone, live in the moment
+            and have a better, less stressful life in general. If you want to learn more about how I think, check out my
+            <a href="{% url 'blog' %}">blog</a>.
+        </p>
+
     </div>
 </div>
