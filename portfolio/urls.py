@@ -10,10 +10,10 @@ urlpatterns = [
     # url(r'^education/', education, name='education'),
     # url(r'^work/', work, name='work'),
     # url(r'^sideprojects/', sideprojects, name='sideprojects'),
-    url(r'^blog/$', blog, name='blog'),
+    # url(r'^blog/$', blog, name='blog'),
     # url(r'^contact/$', contact, name='contact'),
-    url(r'^blog/post1/', 'newsletter.views.post1', name='post1'),
-    url(r'^blog/post2/', 'newsletter.views.post2', name='post2'),
+    # url(r'^blog/post1/', 'newsletter.views.post1', name='post1'),
+    # url(r'^blog/post2/', 'newsletter.views.post2', name='post2'),
 
 ]
 
