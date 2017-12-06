@@ -1,4 +1,4 @@
 # Personal website
 
-Python + Django project for my personal website on [www.stanislavfrolov.com](www.stanislavfrolov.com)
+Python + Django project for my personal website on [stanislavfrolov.com](http://www.stanislavfrolov.com)
 
